@@ -13,7 +13,7 @@ const UserState=(props)=>{
 
     const getUsers=async ()=>{
         const res = await axios.get('https://reqres.in/api/users');
-        console.log(res.data.data);
+        // console.log(res.data.data);
         dispatch({
             type:'GET_USERS',
             payload:res.data.data
@@ -22,7 +22,7 @@ const UserState=(props)=>{
     
     const getProfile =async (id)=>{
         const res = await axios.get(`https://reqres.in/api/users/${id}`);
-        console.log(res.data.data);
+        // console.log(res.data.data);
         dispatch({
             type:'GET_PROFILE',
             payload:res.data.data
